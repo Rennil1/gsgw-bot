@@ -22,5 +22,9 @@ async def start(client, message):
         )
     )
 
-if __name__ == "__main__":
-    app.run()
+    if __name__ == "__main__":
+    try:
+        app.run()
+    except Exception as e:
+        print(f"ERROR: {e}")
+        raise
