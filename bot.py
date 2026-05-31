@@ -1,9 +1,10 @@
+import os
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 app = Client(
     "gsgw_bot",
-    bot_token="8705602121:AAFF_IMwuSBWbmU157T7R 2WRUv5e6ETJzVU"
+    bot_token=os.getenv("BOT_TOKEN")
 )
 
 CHANNEL_LINK = "https://t.me/GSGW01"
@@ -21,4 +22,5 @@ async def start(client, message):
         )
     )
 
-app.run()
+if __name__ == "__main__":
+    app.run()
