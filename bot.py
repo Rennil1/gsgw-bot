@@ -1,5 +1,5 @@
 import os
-from pyrogram import Client, filters
+from pyrogram import Client
 
 try:
     app = Client(
@@ -9,11 +9,7 @@ try:
         bot_token=os.getenv("BOT_TOKEN")
     )
 
-    @app.on_message(filters.command("start"))
-    async def start(client, message):
-        await message.reply("Bot works!")
-
-    print("STARTING BOT...")
+    print("Starting bot...")
     app.run()
 
 except Exception as e:
