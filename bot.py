@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 app = Client(
     "gsgw_bot",
-    bot_token="BOT_TOKEN"
+    bot_token="8705602121:AAFF_IMwuSBWbmU157T7R 2WRUv5e6ETJzVU"
 )
 
 CHANNEL_LINK = "https://t.me/GSGW01"
