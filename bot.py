@@ -1,7 +1,16 @@
 import os
+from pyrogram import Client, filters
 
-print("BOT_TOKEN =", bool(os.getenv("BOT_TOKEN")))
-print("API_ID =", os.getenv("API_ID"))
-print("API_HASH =", bool(os.getenv("API_HASH")))
+app = Client(
+    "gsgw_bot",
+    api_id=int(os.getenv("API_ID")),
+    api_hash=os.getenv("API_HASH"),
+    bot_token=os.getenv("BOT_TOKEN")
+)
 
-print("TEST SUCCESS")
+@app.on_message(filters.command("start"))
+async def start(client, message):
+    await message.reply("Bot works!")
+
+if __name__ == "__main__":
+    app.run()
